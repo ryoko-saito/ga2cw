@@ -54,20 +54,19 @@ func main() {
 	}
 
 	url := "https://api.chatwork.com/v2/rooms/" + config.RoomId + "/messages"
+
 	//bodyの後には文字列がくる
 	param := "body=" + date + " " + "GA PV:" + pv
-	request, error := http.NewRequest("POST", url, bytes.NewBufferString(param))
-	if error != nil {
-		log.Fatal(error)
+	req, err := http.NewRequest("POST", url, bytes.NewBufferString(param))
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	request.Header.Add("X-ChatWorkToken", config.ApiKey)
-	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
-	response, error := http.DefaultClient.Do(request)
-	response.Body.Close()
-	if error != nil {
-		log.Fatal(error)
+	req.Header.Add("X-ChatWorkToken", config.ApiKey)
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	resp, err := http.DefaultClient.Do(req)
+	defer resp.Body.Close()
+	if err != nil {
+		log.Fatal(err)
 	}
-	//fmt.Println(response)
-
 }
