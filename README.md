@@ -5,8 +5,8 @@ Google Analyticsで取得したPVをチャットワークに自動で送信す�
 この内容に関しては下記の記事に詳しい説明があります。<br>
 [【最新版】GoogleAnalytics API 認証設定について画像多めで説明します。 | 東京上野のWeb制作会社LIG](https://liginc.co.jp/356517)<br><br>
 チャットワークのサイトを開き、アクセストークンの取得と自動送信先のルームIDを調べます。方法は下記の記事に詳しい説明があります。<br>
-[PHPでチャットワークAPIを介してメッセージを投稿してみる - saitodev.co](https://saitodev.co/article/1695)<br>
-チャットワークの各値を取得したら、config.json.sampleをconfig.jsonにリネームし、各値を挿入します。<br>
+[PHPでチャットワークAPIを介してメッセージを投稿してみる - saitodev.co](https://saitodev.co/article/1695)<br><br>
+チャットワークの各値を取得したら、config.json.sampleをconfig.jsonにリネームし、各値を挿入します。<br><br>
 最後にGoogle Analyticsを開き、プロファイルIDを調べて、config.jsonに挿入すれば設定は終了です。<br>
 プロファイルIDについては下記の記事に詳しい説明があります。<br>
 [Go言語でGoogle Analyticsのデータをチャットワークに送ってみる - saitodev.co](https://saitodev.co/article/2061)<br><br>
